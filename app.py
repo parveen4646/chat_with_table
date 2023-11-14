@@ -22,7 +22,7 @@ def table_parser(pdf_file_path,user_query):
 	for i in pages:
 		df='tabel' + str(i)
 		df=pd.DataFrame(table[i][0],columns=table[i][0][0])
-		df=df.iloc[1:,:]
+		df=df.iloc[1:,1:]
 		df_dict=df.to_dict(orient='list')
 
 		output = find({
